@@ -1,0 +1,67 @@
+{{define "calendar"}}
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{template "meta"}} {{template "styles"}}
+</head>
+
+<body>
+    <from class="form1">
+        <div class="form1-group">
+            <h1 class="form1_title">Добавить Событие</h1>
+            <div>
+                <input class="form1_input">
+                <label class="form1_label">Название события</label>
+            </div>
+            <div>
+                <input class="form1_input">
+                <label class="form1_label">Дата</label>
+            </div>
+            <div>
+                <input class="form1_input">
+                <label class="form1_label">Время</label>
+            </div>
+            <div>
+                <input class="form1_input">
+                <label class="form1_label">Описание</label>
+            </div>
+        </div>
+        <button type="submit" class="btnAdd" id="submit" onclick="addEvent(15,19,41,6)" ;>Ввод</button>
+    </from>
+
+
+    <div style="width: 100vw; display:table;">
+        <div class='form2' style="float: left;">
+            <h2 class="form2_title">Ближайшие события</h2>
+            <div>
+                <label class="form1_label">Дата:</label>
+                <label type="textbox" class="teckst">24.03.2023</label>
+            </div>
+            <div>
+                <label class="form1_label">Время:</label>
+                <label type="textbox" class="teckst">16.30</label>
+            </div>
+            <div>
+                <label class="form1_label">Событие:</label>
+                <label type="textbox" class="teckst">Бокс</label>
+            </div>
+            <div>
+                <label class="form1_label">Описание:</label>
+                <label type="textbox" class="teckst">Сбор в спортзале</label>
+            </div>
+
+        </div>
+
+        <div class='calendar-wrapper' style="float: left;">
+            <button id="btnPrev" type="button">Предыдущий</button>
+            <button id="btnNext" type="button">Следующий</button>
+            <div id="divCal"></div>
+        </div>
+    </div>
+
+    {{template "scripts"}}
+</body>
+
+</html>
+{{end}}
